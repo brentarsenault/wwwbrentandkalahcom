@@ -1,0 +1,44 @@
+#flexGrid 
+{
+	margin: @center;
+	max-width: @max-width;
+	position: relative;
+	width: @100;
+
+	.flexGridRow
+	{
+		clear: both;
+		display: block;
+		float: left;
+		margin: 0 0 25px 0;
+		max-width: @max-width;
+		width: @100;
+
+		.flexCol
+		{
+			float: left;
+			display: inline;
+
+		}
+
+		.span1
+		{
+			width: @qrtr;
+		}
+
+		.span2
+		{
+			width: @half;
+		}
+
+		.span3
+		{
+			width: @three-qrtr;
+		}
+
+		.span4
+		{
+			width: @100;
+		}
+	}
+}

@@ -1,0 +1,478 @@
+@import "reset.css";
+@import "mixins";
+@import "fonts";
+@import "colors";
+@import "common";
+@import "layout";
+@import "carousel";
+
+.hidden,
+
+{
+	display: none;
+}
+
+#logo
+{
+	width: 290px;
+	height: 258px;
+	background: @navy-blue;
+	position: absolute;
+	z-index: 99;
+	top: 0;
+	left: 3.6101083%;
+
+	div
+	{
+		width: 242px;
+		height: 234px;
+		border: 1px solid white;
+		border-top: none;
+		margin: 0 23px 23px;
+
+		img
+		{
+			margin: 74px 0 0 23px;
+		}
+	}
+}
+
+#mobileLogo
+{
+	display: none;
+	width: 48%;
+	height: auto;
+	margin: 0 0 0 20%;
+}
+
+#mobileMenu
+{
+	float: right;
+	margin: 0 10% 0;
+	width: 30px;
+	height: 24px;
+	display: block;
+	background: url('../images/nav-icon.png') no-repeat;
+	vertical-align: middle;
+}
+
+#flexGrid
+{
+	.flexGridRow
+	{
+
+		&.nav
+		{
+			padding: 90px 0 35px;
+
+			ul
+			{
+				float: right;
+
+				li
+				{
+					margin: 0 30px 0 0;
+
+					a
+					{
+						font-size: 14px;
+					}
+				}
+			}
+		}
+
+		&.mobileNav
+		{
+			margin: 0;
+
+			ul
+			{
+				li
+				{
+					display: block;
+					width: 90%;
+					margin: 0 5%;
+					padding: 15px 0;
+					border-bottom: 1px solid @light-grey;
+
+					&.last
+					{
+						border-bottom: none;
+					}
+				}
+			}
+
+			&.hidden
+			{
+				display: none;
+			}
+		}
+
+		&.ourStory
+		{
+			background: url(@diagonal);
+			padding: 20px 0 45px;
+
+			.ourStoryIntro
+			{
+				padding-top: 50px;
+				padding-left: 5%;
+				width: 95%;
+
+				.leftArrow
+				{
+					float: left;
+					display: inline;
+					width: 10%;
+					padding: 0;
+				}
+
+				.aboutUs
+				{
+					float: left;
+					display: inline;
+					width: 85%;
+					padding: 0 5% 0 0;
+					font-size: 16px;
+				}
+			}
+
+			p 
+			{
+				color: @darker-grey;
+			}
+
+			.flexCol
+			{
+
+				&.span4
+				{
+					&#tabletArrows
+					{
+						display: none;
+					}
+				}
+			}
+		}
+
+		&.theParty
+		{
+			background: @medium-grey;
+			padding-bottom: 35px;
+
+			h3
+			{
+				color: @lightest-grey;
+				opacity: 0.5;
+				margin: 24px 0 0 @40pxPad;
+			}
+
+			h4
+			{
+				background: @med-dark-grey;
+				margin: 25px 0 15px;
+				padding: 15px 0 15px @50pxPad;
+				width: 40%;
+			}
+
+			p
+			{
+				color: @white;
+			}
+
+			img {
+
+			}
+
+			.span2
+			{
+				position: relative;
+
+				&#bride
+				{
+					.bridalNav 
+					{
+						margin-left: 40%;
+					}
+				}
+
+				&#groom
+				{
+					.bridalNav 
+					{
+						margin-left: 45%;
+					}
+				}
+			}
+		}
+
+		&.location
+		{
+			background: @navy-blue;
+
+			.innerFlexGridRow
+			{
+				border: 1px solid white;
+				margin: 30px 2.4%;
+				padding: 25px 0 65px;
+				width: 95%;
+				float: left;
+
+				.flexCol
+				{
+					text-align: center;
+
+					h3
+					{
+						margin: 20px 0 0;
+					}
+
+					& *
+					{
+						color: @white;
+					}
+
+					img
+					{
+						margin: 60px 0;
+
+						&#traditions
+						{
+							margin-bottom: 40px
+						}
+					}
+				}
+			}
+		}
+
+		&.menu
+		{
+			background: @carcoal;
+			color: @white;
+
+			h3
+			{
+				margin: 20px 0 20px @50pxPad;
+			}
+
+			.mealItem
+			{
+				margin:  0 @50pxPad 20px @50pxPad;
+
+				.mealTitle
+				{
+					margin: 0 0 10px;
+					font-weight: bold;
+				}
+
+				.mealDesc
+				{
+					width: 70%;
+				}
+			}
+		}
+
+		&.hotel
+		{
+			background: url(@diagonal);
+			color: @darker-grey;
+			padding: 20px 0 60px;
+
+			img
+			{
+				margin-left: 20%;
+			}
+		}
+
+		&.registry
+		{
+			background: @light-blue url(../images/bg-present.png) no-repeat top center;
+			/*background: @light-blue;*/
+			width: 90%;
+			margin-right: 5%;
+			margin-left: 5%;
+
+			.registryInformation 
+			{
+				width: 70%;
+				padding: 115px 15% 40px;
+			}
+
+			div
+			{
+				display: block;
+
+				a
+				{
+					color: @hyper-blue;
+					margin: 0 0 0 17%;
+					vertical-align: top;
+
+					&#amazon
+					{
+						img
+						{
+							margin: 20px 0 0;
+						}
+					}
+
+					img
+					{
+						vertical-align: top;
+					}
+				}
+			}
+		}
+
+		&.footer
+		{
+			font-size: 10px;
+			text-align: center;
+		}
+	}
+}
+
+.flexCarousel
+{
+	.flexSlide
+	{
+		position: relative;
+
+		.flexImage
+		{
+
+		}
+
+		.flexText
+		{
+			position: absolute;
+			color: @white;
+			font-family: @didot;
+		}
+
+		&.slide1
+		{
+
+			.flexText
+			{
+				.position( 68%,0 );
+				width: 40%;
+
+				h1
+				{
+					visibility: hidden;
+					color: @black;
+				}
+
+				img
+				{
+
+				}
+			}
+		}
+
+		&.slide2
+		{
+		
+			.flexText
+			{
+				.position( 46%,7% );
+				width: 100%;
+
+
+				#quoteCon
+				{
+					position: relative;
+
+					#bracket
+					{
+						.position( 0,0 );
+						font-size: 135px;
+						line-height: 1em;
+						margin: 0;
+					}
+
+					#quote
+					{
+						.position( 33px,4% );
+						width: 900px;
+						font-size: 24px;
+						line-height: 1.4em;
+					}
+				}
+
+				#quoteConMobile
+				{
+					display: none;
+				}
+			}
+
+		}
+
+		&.slide3
+		{
+			.flexText
+			{
+				.position( 54%,7% );
+
+				p
+				{
+					font-size: 68px;
+					
+				}
+
+				span
+				{
+					font-size: 40px;
+					margin: 0 5px;
+					font-style: italic;
+				}
+			}
+		}
+	}	
+}
+
+
+
+
+.bridalParty
+{
+	margin: 0 0 10px @50pxPad;
+	float: left;
+
+	div
+	{
+		float:left;
+		display:inline;
+
+		&.bridalIntro
+		{
+			width: @half;
+		}
+
+		&.bridalPicture
+		{
+			width: 45%;
+			margin-left: 5%;
+
+			img
+			{
+				float: left;
+				margin: 0 auto;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

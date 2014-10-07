@@ -1,0 +1,185 @@
+@fma-ht:	477px;
+@max-width: 1385px;
+@100:		100%;
+@100Pad:  	97.2%;
+@three-qrtr:75%;
+@half:		50%;
+@qrtr:		25%;
+
+@10pxPad:	0.7%;
+@20pxPad:	1.4%;
+@40pxPad:	@20pxPad+@20pxPad;
+@50pxPad: 	@40pxPad + @10pxPad;
+@50pxPadInner: 7.2254335%;
+
+@center: 	0 auto;
+
+@diagonal:	'../images/bg-about-us.jpg';
+
+
+html,
+body
+{
+	width: @100;
+	font-family: @main-font;
+	overflow-x: hidden;
+}
+
+h2
+{
+	color: @white;
+	display: inline-block;
+	text-transform: uppercase;
+}
+
+h3
+{
+	font-family: @didot;
+	font-size: 30px;
+	text-transform: uppercase;	
+}
+
+h4
+{
+	color: @white;
+	font-style: italic;
+	font-weight: bold;
+}
+
+h5
+{
+	color: @black;
+	font-weight: bold;
+	padding: 60px 0 35px;
+}
+
+h6
+{
+	font-weight: bold;
+	margin: 0 0 35px;
+}
+
+a
+{
+	text-decoration: none;
+	color: @grey;
+
+	&:hover
+	{
+		color: @dark-red;
+	}
+}
+
+p
+{
+	line-height: 1.4em;
+	margin: 0 0 10px 0;
+
+	a
+	{
+		color: @hyper-blue;
+	}
+}
+
+ul
+{
+	
+	li
+	{
+		float: left;
+		display: inline;
+	}
+}
+
+/**************************
+* Global Class Styles
+**************************/
+.hidden
+{
+	display: none !important;
+}
+
+.h7
+{
+	font-weight: bold;
+	text-decoration: underline;
+	color: @black !important;
+	margin: 0 0 5px;
+}
+
+.headerTab
+{
+	background: @teal;
+	padding: 50px;
+	font-size: 30px;
+	width: auto;
+	margin: 0 0 0 5%;
+}
+
+.frame
+{
+	background: @light-grey;
+	padding: 5px;
+	width: 90%;
+	max-width: 200px;
+}
+
+.polaroid
+{
+	background: white;
+	float: left;
+	display: inline;
+	padding: 30px 3% 70px;
+	margin: 50px 0 25px 12%;
+	position: relative;
+
+	#pin
+	{
+		width: 71px;
+		height: 44px;
+		background: url(../images/photo-pin.png) no-repeat;
+		.position( -15px,45% );
+	}
+}
+
+.arrow
+{
+	background: url(../images/ourStory-arrows.png) no-repeat;
+	width: 35px;
+	height: 35px;
+	display: inline-block;
+	float: left;
+	margin: 100px 0 0;
+	cursor: pointer;
+
+	&#right
+	{
+		float: right;
+		background-position: 0 -40px;
+		margin: 260px @50pxPad 0 0;
+	}
+}
+
+.bridalNav
+{
+	float: left;
+	clear: both;
+	width: @100;
+	margin: 0 0 0 @50pxPad;
+	vertical-align: baseline;
+}
+
+.bridalButton
+{
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+	margin: 0 5px 0 0;
+	background: url(../images/party-buttons.png) no-repeat 0 0;
+
+	&.active
+	{
+		background-position: -15px 0;
+	}
+}
